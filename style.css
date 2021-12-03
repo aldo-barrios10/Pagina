@@ -1,0 +1,888 @@
+
+/* ---------------Estilos generales------------ */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+
+
+body{
+    padding: 0;
+    background-color: #F2BF80;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+div{
+    display: block;
+ 
+}
+
+img{
+max-width: 100%;
+max-height:100% ;
+width: 100%;
+height: 100%;
+}
+
+h1{text-align: center;
+padding: 20px 0px;}
+
+h2{
+    color: #F23041;
+    font-size: 40px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+section{
+ 
+    margin: 20px 0px;
+    border-radius: 6px;
+}
+
+p{
+    font-size: 15px;
+    font-weight: normal;
+    text-align: justify;
+}
+
+footer{
+    background-color: #F23041;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+/*-------- HEADER Y NAV ---------*/
+
+
+/*POSICIONA EL HEADER Y LO ABARCA TODO EL ANCHO DE LA PANTALLA
+SE LE DA COLOR Y UNA ALTURA*/
+.header{
+    height: 120px;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #F23041;
+}
+
+/*SE LE DA UN DISPLAY FLEX PARA QUE LOS ELEMENTOS SE ORGANICEN EN HORIZONTAL,
+SE LES ASIGNA UN LIMITE DE TAMAÑO Y SE ALINEAN*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    max-height: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/*COLOR Y ESTILO DE LINKS*/
+.nav-link{
+    color:#fff;
+    text-decoration:none;
+    font-size: 20px;
+}
+
+/*ESTILO PRA LINK ACTUAL*/
+.link-activo{
+    border-bottom: #fff 2px solid;
+}
+
+/*SE AJUSTA EL TAMAÑO DEL LOGO*/
+.logo{
+    width: 80px;
+    margin-top: 10px;
+}
+
+/*SE AJUSTA LA LISTA DEL NAV*/
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    
+}
+
+/*ESTILO DE LOS ELEMENTOS DE LISTA*/
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 20px;
+    line-height: 100px;
+}
+.nav-menu-link{   
+    padding: 8px 12px;
+}
+
+
+/*CAMBIO DE ESTILOS DE LISTA*/
+.nav-menu-link:hover{   
+    border-bottom: #fff 2px solid;
+}
+
+/*--------  BARRITAS PARA MENU RESPONSIVO------------*/
+
+.barritas{
+    color: #eeb881;
+    background:none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display:none;
+    cursor: pointer;
+}
+
+
+/*--------------------------ESTILO DE SLIDER------------------------*/
+
+/*AJUSTES DEL CONTENEDOR DEL SLIDER,
+SE ASIGNAN TAMAÑOS MAXIMOS Y LOS LIMITES DEL CONTENEDOR */
+.slider{
+    position:relative;
+    max-width: 100%;
+    max-height: 600px;
+    width: 100%;
+    border-radius: 10px;
+    top: 0px;
+    display: block;
+    justify-content: center;
+    z-index: 1;
+    margin: 0;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+/*SE DA ESTILO AL CONTENEDOR GENERAL Y SE COLOCAN 
+DISPLAY FLEX PARA ACOMODAR EL CONTENIDO HORIZONTALMENTE*/
+.slide{
+    display:flex;
+    transform: translate3d(0,0,0);
+    transition: all 2s;
+    width: 100%;
+}
+
+/*SE ESTABLECE EL CONTENEDOR DE LAS IMAGENES, SU POSICION Y SE ESTABLECEN SUS LIMITES*/
+.slide-img{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    max-width: 100%;
+    height: 100%;
+}
+
+/*ESTILO DE LA IMAGEN DE SLIDER*/
+.slide-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*------------------------------TRANSISCION DE SLIDER (ESTILOS)--------------------------------*/
+
+
+/*SE LIMITA LA POSICION DE LOS LABELS PARA CAMBIAR IMAGEN Y 
+SE ACOMODAN DE MANERA HORIZONTAL*/
+.index-label{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/*SE DA ESTILO A LOS LABELS DEL SLIDER Y SE LIMITA SU TAMAÑO
+Y LA TRANSICION QUE HARAN*/
+.index-label-lbl{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 3px solid #FFF;
+    width: 16px;
+    height: 16px;
+    background:rgba(255,255,255,0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 200ms;
+}
+
+/*ESTILOS DE LABEL CON HOVER*/
+.index-label-lbl:hover{
+    border: 3px solid rgb(196, 67, 67);
+    background:rgba(196, 67, 67,0.5);
+}
+
+/*QUITMOS EL TEXTO DEL LABEL*/
+.index-label p{
+    text-indent: -999px;
+}
+
+
+/*------------------TRANSICION DE SLIDER (ANIMACION)------------*/
+
+/*SE CREA LA TRANSICION AL ACTIVAR EL LABEL CORRESPONDIENTE USANDO LOS ID QUE SE ESTABLECIERON*/
+
+input[id="1"]:checked ~ .slide{
+    animation:none;
+    transform: translate3d(0,0,0);
+}
+input[id="2"]:checked ~ .slide{
+    animation:none;
+    transform: translate3d(-100%,0,0);
+}
+input[id="3"]:checked ~ .slide{
+    animation:none;
+    transform: translate3d(-200%,0,0);
+}
+
+/*---------------------------------INDEX ESPECIALIDADES-------------------------------*/
+
+/* SE LIMITA Y SE CENTRAN LOS CONTENIDOS DE LOS DIVS DEL INDEX*/
+.sec-especialidades div, .sec-promociones {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+/*SE ESTABLECEN LOS TAMAÑOS Y LIMITES DE LAS IMAGENES
+DE LA PRIMERA SECCION DEL INDEX*/
+.sec-especialidades div img{
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+/*CREAMOS UN GRID PARA TENER LOS 3 CONTENEDORES DE 
+LAS ESPECILAIDADES*/
+.especialidades-div-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin: 20px;
+}
+
+/*ESTILO DE TEXTO EN ESPECIALIDADES*/
+.especialidades-div-2 p{
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/*ESTILO A LOS CONTENEDORES DENTRO DEL GRID*/
+.especialidades-div-2 div{
+    background-color: #c70039;
+    border-radius: 10px;
+    
+}
+
+/*ESTILO DE TEXTO PARA LAS DESCRIPCIONES*/
+.especialidades-div-2 div p{
+    margin: 0px 20px;
+}
+
+
+/*-----------------------------INDEX PROMOCIONES------------------------*/
+
+/*SE ESTABLECEN LOS TAMAÑOS Y LIMITES DE LAS IMAGENES
+DE LA SEGUNDA SECCION DEL INDEX*/
+.contenedor-promo img {
+    width: 300px;
+    height: 220px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/*CREAMOS UN GRID CONTENEDOR DE LAS PROMOCIONES*/
+.promociones-div-2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+    gap: 1em;
+    align-items: center;
+}
+
+/*SE DA COLOR Y LIMITES A LOS CONTENEDORES DENTRO DEL GRID*/
+.promociones{
+    background-color: #c70039;
+    padding:5px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*SE DA ESTILO AL LINK QUE SERVIRA PARA IR A LA SECCION DE PROMOCIONES*/
+.link-saber-mas{
+    padding: 8px;
+    background-color: #F23041;   
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*PADDING EXTRAS PARA QUE QUEDE CHIDO*/
+.contenedor-promo{
+    padding-bottom: 5px;
+}
+
+.promociones-div-2{
+    padding: 10px;
+}
+
+.promociones-div-1{
+    padding-bottom: 10px;
+}
+
+
+/*----------------------------FOOTER----------------------------*/
+
+
+/*PONEMOS FLEX PARA ACOMODAAR HORIZONTALMENTE LOS ELEMENTOS*/
+.sect-footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+
+/*ESTILOS PARA LOS LOGOS DE CONTACTO*/
+.foot-3 ul li a span{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: transparent;
+}
+
+
+/*FONDO DE LOGOS DE CONTACTO*/
+.facebook span{
+    background-image: url(imagenes/iconos/facebook.png);
+}
+
+.instagram span{
+    background-image: url(imagenes/iconos/instagram.png);
+}
+
+.twitter span{
+    background-image: url(imagenes/iconos/twitter.png);
+}
+
+.whatsapp span{
+    background-image: url(imagenes/iconos/whatsapp.png);
+}
+
+/*DETERMINAMOS LOS LIMITES Y EL TAMAÑO DE LOS CONTENEDORES DENTRO DEL FOOTER*/
+.foot-1,.foot-2, .foot-3{
+    width: 33%;
+    flex:1;
+    padding: 20px 30px;
+    margin-top: 10px;
+    border-left: #c70038a6 solid 1px;
+    border-right: #c70038a6 solid 1px;
+}
+
+
+/*DAMOS ESTILO A AS LISTAS DE CADA APARTADO DEL FOOTER*/
+.foot-2 ul, .foot-1 ul, .foot-3 ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+/*ESTILOS DE LINKS EN EL FOOTER*/
+.foot-2 ul a, .foot-1 ul a, .foot-3 ul a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/*ESTILO DE LOS TITULOS DEL FOOTER*/
+footer h4{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    border-bottom: #fff 2px solid ;
+}
+
+/*ALINEACION ORIZONTAL DE LOS ELEMENTOS DE LISTA DE LOGOS*/
+.foot-3 ul{
+    display: flex;
+    padding-top: 15px;
+}
+
+.foot-3 ul li{
+    margin-right:25px;
+}
+
+
+/*SECCION DE NOMBRE Y GRUPO*/
+.sect-footer-final p{
+    text-align: center;
+}
+
+
+/*------------------------------TITULOS DE PAGINAS------------------------------------------*/
+
+.sec-menu-1 h1, .sec-galeria-1 h1, .sec-promo-1 h1{
+    padding-top: 50px;
+    font-size: 40px;
+    color:#F23041;
+}
+
+
+/*-------------------------------ESTIOS DEL MENU COMIDAS------------------------------------*/ 
+
+
+/*SE DA ESTILO  LAS SECCIONES DEL MENU */
+.sec-menu-2, .sec-menu-3, .sec-menu-4, .sec-menu-5{
+    background-color: #F25244;
+    margin: 40px;
+    margin-top: 20px;
+}
+.sec-menu-3, .sec-menu-5{
+    background-color: #3e8c8c;
+}
+
+
+/* LOS CONTENEDORES DE CADA PLATILLO TENFA FLEX Y UN BORDE*/
+.div-comida{
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #c70038a6;
+}
+
+.div-comida-final{
+    border-bottom: none;
+}
+
+/*ESTIILO DEL TITULO*/
+.sec-menu-titulo{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+/*ESTILO Y LIMITES DEL CONTENEDOR DE LA IMAGEN DEL MENU PARA QUE ABARQUE UN CUARTO DE
+LA DISPOSICION DEL CONTENEDOR*/
+.div-comida-izq{
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/*AJUSTE DE LA IMAGEN AL CONTENEDOR*/
+.div-comida-izq img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*LIMITES DEL TEXTO PARA QUE USE TRES CUARTOS DE LA DISPOCOSION DEL CONTENEDOR*/
+.div-comida-der{
+    width: 75%;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+/*ESTILOS PARA EL TEXTO DEL MENU*/
+.div-comida-der h3,.div-comida-der p{
+    color: white;
+    font-size: 25px;
+}
+
+.div-comida-der h3, .especialidades-div-2 h3{
+    font-size: 30px;
+    padding: 10px 0px ;
+}
+
+.div-comida-der h5{ 
+    padding-top: 20px;
+}
+
+.sec-menu-2 h2, .sec-menu-3 h2, .sec-menu-4 h2, .sec-menu-5 h2{
+    color: #fff;
+}
+
+/*PADDING EXTRA PARA LA ULTIMA SECCION*/
+.sec-menu-5{
+    padding-bottom: 10px;
+}
+
+
+.postre-bebida{
+    padding: 10px;
+}
+
+
+/*-----------------------------MENU POSTRES Y BEBIDAS-------------------------------*/
+
+
+/*SE CREA UN GRID PARA INSERTAR LAS BEBIDAS Y POSTRES*/
+.grid-postre-bebida{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px 0px;
+    padding: 10px 10px;
+}
+
+/*ESTILOS DE TEXTO PARA LOS ELEMENTOS EN EL GRID*/
+.postre-bebida h3{
+ text-align: center;
+ padding: 10px;
+ color: #fff;
+ font-size: 25px;
+}
+
+.postre-bebida h5{
+    text-align: center;
+    padding: 10px;
+   }
+
+
+/* SE LIMITA EL TAMAÑO DE LAS IMAGENES DEL GRID*/
+.postre-bebida img{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+   }
+
+
+/*---------------------------------ESTILOS DE GALERIA-----------------------------*/
+
+/*SE CREAN DOS GRID PARA LAS DOS SECCIONES DE LA GALERIA*/
+.sec-galeria-3, .sec-galeria-5{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px 40px;
+    margin: 40px;
+}
+
+/*CENTRAMOS TEXTO DE LOS TITULOS DE LAS GALERIAS Y SE DA COLOR AL TEXTO*/
+.sec-galeria-4, .sec-galeria-2{
+    text-align: center;
+    padding-top: 30px;
+}
+.sec-galeria-4 h2, .sec-galeria-2 h2{
+    color: #fff;
+}
+ 
+
+/*SE DA COLOR Y SE LIMITAN LAS GALERIAS*/
+.galeria-1, .galeria-2{
+    background-color: #3e8c8c;
+    border-radius: 20px;
+    margin: 40px;
+    margin-top: 20px;
+ }
+
+.sec-gal-imagen{
+    padding: 5px;
+}
+
+/*SE DA COLOR Y SE LIMITA EL CONTENEDOR DE LA IMAGEN DE LA GALERIA*/
+.sec-gal-imagen a{
+    display: block;
+    background-color: #c70039;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*SE DA TAMAÑO A LAS IMAGENES DE LA GALERIA*/
+.sec-gal-imagen a img{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/*SE DAN ESTILOS A LOS TEXTOS DE LAS IMAGENES*/
+.sec-gal-texto{
+    text-align: center;
+}
+.sec-gal-texto h5{
+    color: #fdfdfd;
+    padding-bottom: 20px;
+}
+
+
+
+/*------------------------------PROMOCIONES ESTILOS-----------------------------*/
+
+/*SE LE DA FLEX A LOS CONTENEDORES DE CADA PROMOCION Y UN MARGEN*/
+.sec-promo-p{
+    display: flex;
+    margin: 20px;
+    padding: 15px;
+}
+
+/*A LA SECCION DE LA IMAGEN SE LE DA UN TERCIO DEL CONTENEDOR*/
+.div-promo-foto{
+    width: 33%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/*SE LE D TAMAÑO A LA IMAGEN Y SE LIMITA*/
+.div-promo-foto img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*SE ASIGNAN DOS TERCIOS DEL CONTENEDOR AL TEXTO*/
+.div-promo-txt{
+    width: 66%;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+/*SE DA ESTILO AL TEXTO DE LAS PROMOCIONES*/
+.div-promo-txt h3,.div-promo-txt p{
+    color: white;
+    font-size: 25px;
+}
+.div-promo-txt h3{
+    font-size: 32px;
+    padding: 10px 0px ;
+    text-align: center;
+}
+.div-promo-txt p{
+   margin: 10px;
+}
+
+
+/*SE LE DA COLOR A LOS DOS TIPOS DE COTENEDORES DE PROMOCIONES*/
+.promo-1{
+    background-color: #3e8c8c;
+}
+.promo-2{
+    background-color: #F25244;
+}
+
+
+/*-----------------------------DISEÑO RESPONSIVO----------------------------*/
+
+@media(max-width: 800px){
+
+    body{
+        margin-top: 60px;
+    }
+
+
+    /* CAMBIO DE TAMAÑO DE FUENTE DE TITULOS*/
+    h2, .sec-menu-titulo{
+        font-size: 2rem;
+    }
+    .sec-menu-1 h1, .sec-galeria-1 h1, .sec-promo-1 h1{
+        font-size: 2rem;
+        padding: 10px 0px;
+    }
+
+    /* CAMBIO DE TAMAÑO DE FUENTE DE SUBTITULOS*/
+    .div-comida-der h3,  .div-promo-txt h3, .especialidades-div-2 h3{
+        font-size: 1.5rem;
+    }
+
+    /* CAMBIO DE TAMAÑO DE FUENTE DE TEXTO GENERAL*/
+    .div-comida-der p, .div-promo-txt p, .especialidades-div-2 p{
+        font-size: 1rem;
+    }
+    
+    /* ADAPTACION DE MARGINS DE LAS SECCIONES*/
+    .sec-galeria-3, .sec-galeria-5{
+         margin: 20px;
+     }
+
+     .galeria-1, .galeria-2{
+        margin: 10px;
+        margin-top: 20px;
+     }
+
+     .sec-menu-2, .sec-menu-3, .sec-menu-4, .sec-menu-5{
+        margin: 10px;
+    }
+
+    /*-------------------------ADAPTACION NAV-------------------*/
+
+
+    /*AJUSTES DE TAMAÑOS*/
+    .header{
+        height: 60px;
+        position: fixed;
+    }
+
+    .logo{
+        width: 50px;
+       margin-left: 20px;
+    }
+    .nav-menu-item{
+        line-height: 60px;
+    }
+
+    /*ACOMODAMOS EL NAV PARA QUE ESTE SE ACOMODE EN COLUMNA Y QUEDE 
+    DE MANERA ADECUADA AL DESPLEGARSE, TAMBIEN SE DETERMINA UN ANCHO 
+    DE TODA LA PAGINA */
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #ff5733;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0px;
+        z-index: 10;
+        height: calc(100%-60px);
+        overflow-y: auto;
+
+        left:100%;
+        transition: left 0.4s;
+    }
+    
+
+    
+    /*SE HACEN VISIBLES LAS BARRITAS DEL MENU DEL NAV*/
+    .barritas{
+        display:block;
+    }
+
+    /*PARA PODER DESPLEGAR MENU DE NAV*/
+    .nav-menu-visible{
+        left:0;
+    }
+
+
+    /*---------------------------ADAPTACION SLIDER------------------------------*/
+
+    .slider{
+        padding-top: 30px;
+    }
+    
+    .pagination{
+        padding-top: 50px;
+    }
+
+    /*--------------------------INDEX SECCIONES-------------------------*/
+
+    /*SE REDISTRIBUYEN LOS ELEMENTOS DE LOS GRID*/
+
+    .especialidades-div-2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .promociones-div-2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 10px;
+        gap: 1em;
+    }
+
+    /*-----------------------ADAPTACION FOOTER--------------------------*/
+
+    .sect-footer{
+        display: block;
+        width: 100%;
+    }
+
+    .foot-1,.foot-2, .foot-3{
+        width: 100%;
+        border-bottom:1px solid #c70039;
+    }
+
+    /*---------------------ADAPTACION MENU COMIDAS-----------------------*/
+    /*SE ESTABLECEN NUEVO LIMITES*/
+    .div-comida{
+        display: block;
+    }
+    .div-comida-der, .div-comida-izq{
+        width: 100%;
+    }
+    .div-comida-izq img{
+        margin: auto;
+    }
+    .div-comida-der{
+        text-align: center;
+    }
+
+    /*---------------------ADAPTACION MENU POSTRES Y BEBIDAS-----------------------*/
+
+    /*SE REDISTRIBUYEN LOS ELEMENTOS DEL GRID*/
+
+    .grid-postre-bebida{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px 0px;
+        padding: 10px 20px;
+    }
+
+    /*----------------------ADAPTACION GALERIAS-----------------------*/
+
+    /*SE REDISTRIBUYEN LOS ELEMENTOS DEL GRID*/
+    .sec-galeria-3, .sec-galeria-5{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .sec-gal-imagen a img{
+        display: block;
+        margin: auto;
+    }
+
+    .grid{
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*----------------------ADAPTACION PROMOCIONES----------------------*/
+
+    .sec-promo-p{
+        display: block;
+    }
+    .div-promo-foto, .div-promo-txt{
+        width: 100%;
+    }
+    .div-promo-foto img{
+        margin: auto;
+    }
+    
+}
+
+/*ADAPTACION PARA PANTALLAS MAS PEQUEÑAS
+ESTE APARTADO SOLO AFECTA A UN GRID PORQUE EN 
+RESOLUCIONES MAS PEQUEÑAS DABA PROBLEMAS*/
+@media(max-width: 520px){
+    .promociones-div-2{
+        grid-template-columns: 1fr;
+    }
+}
