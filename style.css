@@ -665,7 +665,7 @@ LA DISPOSICION DEL CONTENEDOR*/
     padding-right: 20px;
 }
 
-/*SE DA ESTILO AL TEXTO DE LAS PROMOCIONES*/
+/*SE DA ESTILO A LOS TITULOS Y AL TEXTO GENERAL DE LAS PROMOCIONES*/
 .div-promo-txt h3,.div-promo-txt p{
     color: white;
     font-size: 25px;

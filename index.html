@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Cochiloco</title>
+    <!-- ENLACE CSS-->
     <link rel = "stylesheet" href="style.css">
+    <!-- IMAGEN DE FAVICON-->
     <link rel="shortcut icon" href="imagenes/logo.png" type="image/png">
     <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <!-- ENLACE JAVASCRIPT-->
     <script defer src="index.js"></script>
+    <!-- FUENTE PARA BARRITAS DE MENU RESPONSIVO-->
     <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- CONTENEDOR DE HEADER-->
     <div class="div-header">
         <header class="header">
+            <!-- --------NAV--------- -->
             <nav class="nav">
+                <!-- --------LOGOTIPO--------- -->
                 <a href="index.html" class="logo">
                     <img src="imagenes/logo.png">
                 </a>
+                <!-- --------BARRAS DE MENU RESPONSIVO--------- -->
                 <button class="barritas">
                     <i class="fas fa-bars"></i>
                 </button>
+                <!-- --------LISTA DE MENU DE NAVEGACION--------- -->
                 <ul class="nav-menu ">
+                    <!-- --------LINK INICIO--------- -->
                     <li class="nav-menu-item">
                         <a href="#" class="nav-menu-link nav-link link-activo">INICIO</a>
                     </li>
+                    <!-- --------LINK MENU--------- -->
                     <li class="nav-menu-item">
                         <a href="menu.html" class="nav-menu-link nav-link">MENÚ</a>
                     </li>
+                    <!-- --------LINK GALERIA--------- -->
                     <li class="nav-menu-item">
                         <a href="galeria.html" class="nav-menu-link nav-link">GALERÍA</a>
                     </li>
+                    <!-- --------LINK PROMOCIONES--------- -->
                     <li class="nav-menu-item">
                         <a href="promociones.html" class="nav-menu-link nav-link">PROMOCIONES</a>
                     </li>
@@ -38,11 +51,15 @@
             </nav>
         </header>
     </div>
+
+    <!-- --------CONTENEDOR DEL SLIDER--------- -->
     <div class= "slider">
+        <!-- --------INPUT PARA PODER PASAR IMAGENES DEL SLIDER--------- -->
         <input type="radio" id="1" name="slider-imagen" hidden/>
         <input type="radio" id="2" name="slider-imagen" hidden/>
         <input type="radio" id="3" name="slider-imagen" hidden/>
 
+        <!-- --------CONTENEDOR DE IMAGENES DE SLIDER--------- -->
         <div class="slide">
             <div class="slide-img">
                 <img src="imagenes/slider1.jpeg">
@@ -56,6 +73,7 @@
 
         </div>
 
+        <!-- --------ETIQUETAS PARA PODER PASAR LAS IMAGENES DEL SLIDER--------- -->
         <div class="index-label">
             <label class="index-label-lbl" for="1">
                <p>1</p>
@@ -68,70 +86,100 @@
             <label class="index-label-lbl" for="3">
                 <p>3</p>
             </label>
-
         </div>
     </div>
 
+    <!-- --------SECCION DE ESPECIALIDADES EN INDEX--------- -->
     <section class="sec-especialidades">
+        <!-- --------TITULO DE SECCION--------- -->
         <div class="especialidades-div-1">
             <h2>ESPECIALIDADES</h2>
         </div>
+        <!-- --------CONTENEDOR DE ESPECIALIDADES--------- -->
         <div class="especialidades-div-2">
+            <!-- --------ESPECIALIDAD 1--------- -->
             <div class="especialidades-1">
+                <!-- --------ESPECIALIDAD TITULO 1--------- -->
                 <h3>ORDEN DE COHINITA PIBIL</h3>
+                <!-- --------ESPECIALIDAD IMAGEN Y TEXTO--------- -->
                 <a href="menu.html#cochinita"><img src="imagenes/index/cochinita.jpeg" ></a>
                 <p>Prueba la mejor cochinita de México y uno de los mejores platos originarios de Yucatan.</p>
             </div>
+            <!-- --------ESPECIALIDAD 2--------- -->
             <div class="especialidades-2">
+                <!-- --------ESPECIALIDAD TITULO 2--------- -->
                 <h3>CHAPATA DE COCHINITA</h3>
+                <!-- --------ESPECIALIDAD IMAGEN Y TEXTO--------- -->
                 <a href="menu.html#chapata"><img src="imagenes/index/chapata.jpeg" ></a>
                 <p>Prueba una de nuestras chapatas preparada con los ingredientes más frescos y con la mejor cochinita.</p>
             </div>
+            <!-- --------ESPECIALIDAD 3--------- -->
             <div class="especialidades-3">
+                <!-- --------ESPECIALIDAD TITULO 3--------- -->
                 <h3>FLAUTAS DE COCHINITA</h3>
+                <!-- --------ESPECIALIDAD IMAGEN Y TEXTO--------- -->
                 <a href="menu.html#flautas"><img src="imagenes/index/flautas.jpg" ></a>
                 <p>Prueba un tipico platillo mexicano, pero con el toque de nuestra cocina Yucateca. </p>
             </div>
         </div>
     </section>
 
+    <!-- --------SECCION PROMOCIONES INDEX--------- -->
     <section class="sec-promociones">
+        <!-- --------TITULO PROMOCIONES--------- -->
         <div class="promociones-div-1">
             <h2>¿CONOCES NUESTRAS PROMOCIONES?</h2>
         </div>
+        <!-- --------CONTENEDOR DE PROMOCIONES--------- -->
         <div class="promociones-div-2">
+            <!-- --------PROMOCION 1-------- -->
             <div class="promociones">
+                <!-- --------IMAGEN DE PROMOCION-------- -->
                 <div class="contenedor-promo">
                     <a href="promociones.html#dia-descuento"><img src="imagenes/index/descuento.jpg" ></a>
                 </div>
+                <!-- --------LINK DE PROMOCION -------- -->
                 <a href="promociones.html#dia-descuento" class="link-saber-mas">DESCUENTO</a>
             </div>
+            <!-- --------PROMOCION 2-------- -->
             <div class="promociones">
+                <!-- --------IMAGEN DE PROMOCION-------- -->
                 <div class="contenedor-promo">
                     <a href="promociones.html#sabado-familiar"><img src="imagenes/index/familiar.jpeg" ></a>
                 </div>
+                 <!-- --------LINK DE PROMOCION -------- -->
                 <a href="promociones.html#sabado-familiar" class="link-saber-mas">DIA FAMILIAR</a>
             </div>
+            <!-- --------PROMOCION 3-------- -->
             <div class="promociones">
+                <!-- --------IMAGEN DE PROMOCION-------- -->
                 <div class="contenedor-promo">
                     <a href="promociones.html#viernes-2x1"><img src="imagenes/index/bebidas.jpeg" ></a>
                 </div>
+                 <!-- --------LINK DE PROMOCION -------- -->
                 <a href="promociones.html#viernes-2x1" class="link-saber-mas">VIERNES 2X1</a>
             </div>
+            <!-- --------PROMOCION 4-------- -->
             <div class="promociones">
+                <!-- --------IMAGEN DE PROMOCION-------- -->
                 <div class="contenedor-promo">
                     <a href="promociones.html#eventos"><img src="imagenes/index/cumple.jpg" ></a>
                 </div>
+                 <!-- --------LINK DE PROMOCION -------- -->
                 <a href="promociones.html#eventos" class="link-saber-mas">EVENTOS</a>
             </div>
         </div>
     </section>
 
-
+     <!-- --------FOOTER-------- -->
     <footer>
+        <!-- --------SECCION 1 DE FOOTER-------- -->
         <section class="sect-footer">
+            <!-- --------DIVISION 1-------- -->
             <div class="foot-1">
+                <!-- --------TITULO DIVISION 1-------- -->
                 <h4>DIRECCION</h4>
+                    <!-- --------LISTA DIRECCIONES DE RESTAURANTES-------- -->
                     <ul>
                         <li>
                             <a href="https://goo.gl/maps/bz22dnMGr3hizhaX9" target="_blank">1.- Av. Hacienda de Rancho Seco, Impulosora Popular Avicola, Nezahuacoyotl,EDOMEX.</a>
@@ -141,8 +189,11 @@
                         </li>
                     </ul>
             </div>
+            <!-- --------DIVISION 2-------- -->
             <div class="foot-2">
+                <!-- --------TITULO DIVISION 2-------- -->
                 <h4>HORARIO</h4>
+                <!-- --------LISTA DE HORARIOS-------- -->
                 <ul>
                     <li>
                        <p>Lunes a Viernes: 10:00am - 22:00pm</p>
@@ -152,25 +203,34 @@
                     </li>
                 </ul>
             </div>
+             <!-- --------DIVISION 3-------- -->
             <div class="foot-3">
+                <!-- --------TITULO DIVISION 2-------- -->
                 <h4>CONTACTO</h4>
+                    <!-- --------LISTA DE REDES SOCIALES-------- -->
                     <ul>
                         <li>
+                            <!-- --------FACEBOOK-------- -->
                             <a class="facebook" href="https://es-la.facebook.com/" target="_blank" ><span>Facebook</span></a>
                         </li>
                         <li>
+                            <!-- --------INTAGRAM-------- -->
                             <a class="instagram" href="https://www.instagram.com/?hl=es" target="_blank"><span>Instagram</span></a>
                         </li>
                         <li>
+                            <!-- --------WHATSAPP-------- -->
                             <a class="whatsapp" href="https://web.whatsapp.com/" target="_blank"><span>Whatsapp</span></a>
                         </li>
                         <li>
+                            <!-- --------TWITTER-------- -->
                             <a class="twitter" href="https://twitter.com/?lang=es" target="_blank"><span>Twitter</span></a>
                         </li>
                     </ul>
             </div>
         </section>
+        <!-- --------SECCION 2 DE FOOTER-------- -->
         <section class="sect-footer-final">
+            <!-- --------DIVISION DE DATOS PERSONALES-------- -->
             <div class="foot-4">
                 <p>Aldo Barrios Garcia</p>
                 <p>Programación Web 1  Grupo:1559</p>

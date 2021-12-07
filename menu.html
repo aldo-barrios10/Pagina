@@ -1,39 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Cochiloco</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon"  href="imagenes/logo.png" type="image/png">
+    <!-- ENLACE CSS-->
+    <link rel = "stylesheet" href="style.css">
+    <!-- IMAGEN DE FAVICON-->
+    <link rel="shortcut icon" href="imagenes/logo.png" type="image/png">
     <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <!-- ENLACE JAVASCRIPT-->
     <script defer src="index.js"></script>
+    <!-- FUENTE PARA BARRITAS DE MENU RESPONSIVO-->
     <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- CONTENEDOR DE HEADER-->
     <div class="div-header">
         <header class="header">
+            <!-- --------NAV--------- -->
             <nav class="nav">
+                <!-- --------LOGOTIPO--------- -->
                 <a href="index.html" class="logo">
                     <img src="imagenes/logo.png">
                 </a>
+                <!-- --------BARRAS DE MENU RESPONSIVO--------- -->
                 <button class="barritas">
                     <i class="fas fa-bars"></i>
                 </button>
+                <!-- --------LISTA DE MENU DE NAVEGACION--------- -->
                 <ul class="nav-menu ">
+                    <!-- --------LINK INICIO--------- -->
                     <li class="nav-menu-item">
                         <a href="index.html" class="nav-menu-link nav-link">INICIO</a>
                     </li>
+                    <!-- --------LINK MENU--------- -->
                     <li class="nav-menu-item">
                         <a href="#" class="nav-menu-link nav-link link-activo">MENÚ</a>
                     </li>
+                    <!-- --------LINK GALERIA--------- -->
                     <li class="nav-menu-item">
                         <a href="galeria.html" class="nav-menu-link nav-link">GALERÍA</a>
                     </li>
-                    <li class="nav-menu-item" aria-label="Ir a servicios">
+                    <!-- --------LINK PROMOCIONES--------- -->
+                    <li class="nav-menu-item">
                         <a href="promociones.html" class="nav-menu-link nav-link">PROMOCIONES</a>
                     </li>
                 </ul>
@@ -41,17 +54,23 @@
         </header>
     </div>
 
+    <!-- --------SECCION 1 DE MENU TITULO--------- -->
     <section class="sec-menu-1">
         <h1>BIENVENIDO A NUESTRO MENÚ</h1>
     </section>
+    <!-- --------SECCION 2 DE MENU--------- -->
     <section class="sec-menu-2">
+        <!-- --------TITULO DE ENTRADAS--------- -->
         <div class="sec-menu-titulo">
             <h2>ENTRADAS</h2>
         </div>
+        <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/sopaazteca.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>SOPA AZTECA</h3>
                 <p>Una de las mejores sopas de México hasta tu mesa. Elaborada con caldo de jitomates molidos, ajo,
@@ -59,10 +78,13 @@
                 <h5>Costo: $35</h5>
             </div>
         </div>
+        <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+             <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/sopalima.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>SOPA DE LIMA</h3>
                 <p>Una sopa tipica de la región de Yucatan. Un caldo ligero de pollo, aderezado con orégano y comino,
@@ -70,10 +92,13 @@
                 <h5>Costo:$30</h5>
             </div>
         </div>
+        <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/sopafideo.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>SOPA DE FIDEO</h3>
                 <p>¿Quieres algo más sencillo? Te ofrecemos la clásica sopa de fideo en caldo de jitomate y caldo de
@@ -81,10 +106,13 @@
                 <h5>Costo: $20</h5>
             </div>
         </div>
+        <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/salbute.jpg">
             </div>
+             <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>SALBUTE</h3>
                 <p>Una tortilla frita con frijoles, cebolla, aguacate y cochinita pibil o pollo hervido. Puede ser
@@ -92,10 +120,13 @@
                 <h5>Costo: $30 por 4 piezas</h5>
             </div>
         </div>
+        <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/consome.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>CONSOME DE POLLO</h3>
                 <p>Una sopa preparada con el mejor pollo y granos de arroz. Viene acompañada de zanahoria, papa
@@ -103,10 +134,13 @@
                 <h5>Costo: $20</h5>
             </div>
         </div>
+        <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida div-comida-final">
+             <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/huevosmontuleños.png">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>HUEVOS MOTULEÑOS</h3>
                 <p> Este platillo tiene como base una tortilla frita con frijoles refritos negros y encima un huevo
@@ -117,15 +151,19 @@
         </div>
     </section>
 
-
+    <!-- --------SECCION 3 DE MENU--------- -->
     <section class="sec-menu-3">
+        <!-- --------TITULO DE ESPECIALIDADES--------- -->
         <div class="sec-menu-titulo">
             <h2>ESPECIALIDADES</h2>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/index/cochinita.jpeg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der" id="cochinita">
                 <h3>COCHINITA PIBIL</h3>
                 <p>Carne de cerdo adobada en achiote y condimentada con jugo de naranja y pimienta negra. Te ofrecemos
@@ -135,10 +173,13 @@
                 <h5>Paquete para 4: $550 </h5>
             </div>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/index/chapata.jpeg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der" id="chapata">
                 <h3>CHAPATA DE COCHINITA</h3>
                 <p>Una chapata preparada con cochinita pibil, chipotle, jitomate, aguacate, lechuga, queso oaxaca
@@ -148,10 +189,13 @@
                 <h5>Paquete: $145</h5>
             </div>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida div-comida-final">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/index/flautas.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der" id="flautas">
                 <h3>FLAUTAS DE COCHINITA</h3>
                 <p>Flautas preparadas con nuestra mejor cochinita. La orden incluye 5 flautas preparadas con crema,
@@ -163,26 +207,33 @@
         </div>
     </section>
 
-
+    <!-- --------SECCION 4 DEL MENU--------- -->
     <section class="sec-menu-4">
+        <!-- --------TITULO DE PLATOS FUERTES--------- -->
         <div class="sec-menu-titulo">
             <h2>PLATOS FUERTES</h2>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/pizza.png">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>PIZZA DE COCHINITA</h3>
-                <p>Una pizza preparada con salsa de jitomate, queso y cochinita. Acompañada de cebolla morada, cilantro,
+                <p>Una pizza grande (35cm) preparada con salsa de jitomate, queso y cochinita. Acompañada de cebolla morada, cilantro,
                     piña y chile habanero. Puede llevar salsa verde y salsa cátsup.</p>
                 <h5>Costo: $160</h5>
             </div>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/tamales.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>TAMALES COCHILOCOS</h3>
                 <p>Una orden de 3 tamales rellenos de cochinita, salsa habanera y envueltos en hoja de plátano. Incluye
@@ -190,21 +241,27 @@
                 <h5>Costo: $60</h5>
             </div>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/pocphuc.webp">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>POC CHUC</h3>
-                <p>Un platillo preparado con carne de cerdo marinada en naranja, ajo y pimienta. Este patillo se prepara
+                <p>Un platillo preparado con carne de cerdo (300gr) marinada en naranja, ajo y pimienta. Este patillo se prepara
                     a la parrilla y viene acompañada de una ración de frijoles colados.</p>
-                <h5>Costo: $110</h5>
+                <h5>Costo: $130</h5>
             </div>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/papadzul.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>PAPADZUL</h3>
                 <p> Este platillo consiste en 5 tortillas de maíz bañada en salsa verde con chile habanero y rellena de
@@ -212,102 +269,125 @@
                 <h5>Costo: $75 </h5>
             </div>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/quesorelleno.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>QUESO RELLENO</h3>
                 <p>Queso Holandes relleno de picadillo de carne molida con almendras, pimientos, aceitunas y bañado en
-                    salsa de tomate o salsa de chile habanero.</p>
+                    salsa de tomate o salsa de chile habanero. La orden incluye 6 piezas.</p>
                 <h5>Costo: $80</h5>
             </div>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq">
                 <img src="imagenes/menu/enchiladas.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>ENCHILADAS VERDES</h3>
                 <p>Tortilla rellena de pollo y bañada en salsa verde y acompañada con crema, queso, lechuga, cebolla y
-                    cilantro.</p>
+                    cilantro. La orden incluye 4 piezas.</p>
                 <h5>Costo: $60</h5>
             </div>
         </div>
+         <!-- --------CONTENEDOR DE PLATILLO--------- -->
         <div class="div-comida div-comida-final">
+            <!-- --------IMAGEN DE PLATILLO--------- -->
             <div class="div-comida-izq ">
                 <img src="imagenes/menu/escabeche.jpg">
             </div>
+            <!-- --------TITULO DESCRIPCION Y PRECIO DE PLATILLO--------- -->
             <div class="div-comida-der">
                 <h3>ESCABECHE DE POLLO</h3>
-                <p>Platillo preparado con pollo a la parrilla y sazonado con cebolla, pimienta y especias de la región.
+                <p>Platillo preparado con pollo a la parrilla (250gr) y sazonado con cebolla, pimienta y especias de la región.
                     Se sirve con caldo y chile Xcatic asado.</p>
                 <h5>Costo: $80</h5>
             </div>
         </div>
     </section>
 
-
+    <!-- --------SECCION 5 DEL MENU--------- -->
     <section class="sec-menu-5">
+        <!-- --------TITULO DE POSTRES Y BEBIDAS--------- -->
         <div class="sec-menu-titulo">
             <h2>POSTRES Y BEBIDAS</h2>
         </div>
+        <!-- --------CONTENEDOR POSTRES Y BEBIDAS--------- -->
         <div class="grid-postre-bebida">
+            <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>FLAN NAPOLITANO</h3>
                 <img src="imagenes/menu/flan.webp">
                 <h5>Costo: $60</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>HELADO DE LIMÓN</h3>
                 <img src="imagenes/menu/helado.JPG">
                 <h5>Costo: $25</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>PASTEL DE CHOCOLATE</h3>
                 <img src="imagenes/menu/pastel.jpg">
                 <h5>Costo: $55</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>AGUA DE JAMAICA</h3>
                 <img src="imagenes/menu/aguajamaica.jpg">
                 <h5>Costo: $20 el litro</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>AGUA DE HORCHATA</h3>
                 <img src="imagenes/menu/aguahorchata.jpg">
                 <h5>Costo: $20 el litro</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>AGUA DE LIMÓN</h3>
                 <img src="imagenes/menu/agualimon.jpg">
                 <h5>Costo: $20 el litro</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>AGUA DE LIMA</h3>
                 <img src="imagenes/menu/aguadelima.jpg">
                 <h5>Costo: $20 el litro</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>REFRESCO JARRITOS</h3>
                 <img src="imagenes/menu/jarritos.jpeg">
                 <h5>Costo: $20 el litro</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>TARRO DE CERVEZA</h3>
                 <img src="imagenes/menu/cerveza.jpeg">
                 <h5>Costo: $25 por 355 ml</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>JARRA DE TEPACHE</h3>
                 <img src="imagenes/menu/tepache.jpg">
                 <h5>Costo: $25 el litro</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>JARRA DE CLERICOT</h3>
                 <img src="imagenes/menu/clericot.jpg">
                 <h5>Costo: $120 el litro</h5>
             </div>
+             <!-- --------TITULO IMAGEN Y PRECIO DE POSTRES Y BEBIDAS--------- -->
             <div class="postre-bebida">
                 <h3>XTABENTU</h3>
                 <img src="imagenes/menu/xtabentu.jpg">
@@ -316,54 +396,69 @@
         </div>
     </section>
 
-    <footer>
+     <!-- --------FOOTER-------- -->
+     <footer>
+        <!-- --------SECCION 1 DE FOOTER-------- -->
         <section class="sect-footer">
+            <!-- --------DIVISION 1-------- -->
             <div class="foot-1">
+                <!-- --------TITULO DIVISION 1-------- -->
                 <h4>DIRECCION</h4>
-                <ul>
-                    <li>
-                        <a href="https://goo.gl/maps/bz22dnMGr3hizhaX9" target="_blank">1.- Av. Hacienda de Rancho Seco,
-                            Impulosora Popular Avicola, Nezahuacoyotl,EDOMEX.</a>
-                    </li>
-                    <li>
-                        <a href="https://goo.gl/maps/oj6mp6tmzgfsuek79" target="_blank">2.- Av. 100 Metros Esq. Fortuna,
-                            Magdalena de las Salinas Gustavo A. Madero, México DF.</a>
-                    </li>
-                </ul>
+                    <!-- --------LISTA DIRECCIONES DE RESTAURANTES-------- -->
+                    <ul>
+                        <li>
+                            <a href="https://goo.gl/maps/bz22dnMGr3hizhaX9" target="_blank">1.- Av. Hacienda de Rancho Seco, Impulosora Popular Avicola, Nezahuacoyotl,EDOMEX.</a>
+                        </li>
+                        <li>
+                            <a href="https://goo.gl/maps/oj6mp6tmzgfsuek79" target="_blank">2.- Av. 100 Metros Esq. Fortuna, Magdalena de las Salinas Gustavo A. Madero, México DF.</a>
+                        </li>
+                    </ul>
             </div>
+            <!-- --------DIVISION 2-------- -->
             <div class="foot-2">
+                <!-- --------TITULO DIVISION 2-------- -->
                 <h4>HORARIO</h4>
+                <!-- --------LISTA DE HORARIOS-------- -->
                 <ul>
                     <li>
-                        <p>Lunes a Viernes: 10:00am - 22:00pm</p>
+                       <p>Lunes a Viernes: 10:00am - 22:00pm</p>
                     </li>
                     <li>
                         <p>Sabado y Domingo: 11:00am - 20:00pm</p>
                     </li>
                 </ul>
             </div>
+             <!-- --------DIVISION 3-------- -->
             <div class="foot-3">
+                <!-- --------TITULO DIVISION 2-------- -->
                 <h4>CONTACTO</h4>
+                    <!-- --------LISTA DE REDES SOCIALES-------- -->
                     <ul>
                         <li>
+                            <!-- --------FACEBOOK-------- -->
                             <a class="facebook" href="https://es-la.facebook.com/" target="_blank" ><span>Facebook</span></a>
                         </li>
                         <li>
+                            <!-- --------INTAGRAM-------- -->
                             <a class="instagram" href="https://www.instagram.com/?hl=es" target="_blank"><span>Instagram</span></a>
                         </li>
                         <li>
+                            <!-- --------WHATSAPP-------- -->
                             <a class="whatsapp" href="https://web.whatsapp.com/" target="_blank"><span>Whatsapp</span></a>
                         </li>
                         <li>
+                            <!-- --------TWITTER-------- -->
                             <a class="twitter" href="https://twitter.com/?lang=es" target="_blank"><span>Twitter</span></a>
                         </li>
                     </ul>
             </div>
         </section>
+        <!-- --------SECCION 2 DE FOOTER-------- -->
         <section class="sect-footer-final">
+            <!-- --------DIVISION DE DATOS PERSONALES-------- -->
             <div class="foot-4">
                 <p>Aldo Barrios Garcia</p>
-                <p>Programación Web 1 Grupo:1559</p>
+                <p>Programación Web 1  Grupo:1559</p>
             </div>
         </section>
     </footer>
